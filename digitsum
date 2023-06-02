@@ -1,0 +1,39 @@
+package kkeerthi1nt21is069;
+
+import java.util.Scanner;
+
+
+
+public class Digitsum {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int n;
+		System.out.println("Enter the two digit number");
+		n = sc.nextInt();
+		while(n<10 && n>100) {
+			System.out.println("The input can only be a two digit number.Enter again");
+			n = sc.nextInt();
+		}
+		Digitsum obj = new Digitsum();
+		System.out.println("The resultant sum is: "+obj.sum1(n));
+	}
+
+	public int sum1(int n) {
+		int sum =0;
+		
+	 for(int i =0;i<2;i++) {
+		 sum += (n%10);
+		 n = n/10;
+		 
+	 }
+	 if(sum<10) {
+		 
+		 return sum;
+		 
+	 }
+	 
+		return sum1(sum);
+		
+	
+}
+}
