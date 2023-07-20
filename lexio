@@ -1,63 +1,39 @@
-package Jav_lab;
+package lex;
 import java.util.*;
-public class lexico {
+public class lex {
+public static void main(String args[])
+{
+	Scanner Sc=new Scanner(System.in);
+	String[] name=new String[5];
+	System.out.println("enter 5 strings");
+	for(int i=0;i<5;i++) {
+		name[i]=Sc.nextLine();
+	}
+	int n=5;
+	System.out.println("Before sorting");
 	
-	public void lexic()
-	{   
-		String ip1;
-		String ip2;
-		String ip3;
-		String ip4;
-		String ip5;
-		
-		Scanner sc=new Scanner(System.in);
-		
-		System.out.println("Enter 1st string");
-		ip1=sc.next();
-		
-		System.out.println("Enter 2nd string");
-		ip2=sc.next();
-		
-		System.out.println("Enter 3rd string");
-		ip3=sc.next();
-		
-		
-		System.out.println("Enter 4th string");
-		ip4=sc.next();
-		
-        System.out.println("Enter 5th string");
-		ip5=sc.next();
-		
-		char arr1[]=ip1.toCharArray();
-		char arr2[]=ip2.toCharArray();
-		char arr3[]=ip3.toCharArray();
-		char arr4[]=ip4.toCharArray();
-		
-		char arr5[]=ip5.toCharArray();
-		Arrays.sort(arr1);
-		Arrays.sort(arr2);
-		Arrays.sort(arr3);
-		Arrays.sort(arr4);
-		Arrays.sort(arr5);
-		
-		System.out.println(arr1);
-		System.out.println(arr2);
-		System.out.println(arr3);
-		System.out.println(arr4);
-		System.out.println(arr5);
-		
-		
+		for(int i=0;i<n;i++)
+		{
+			System.out.println(name[i]);
+		}
+	
+	for(int i=0;i<n-1;++i) {
+		for(int j=i+1;j<n;++j) {
+			if(name[i].compareTo(name[j])>0)
+			{
+				String temp=name[i];
+				name[i]=name[j];
+				name[j]=temp;
+			}
+		}
+	}
+	System.out.println("after sorting");
+	
+	for(int i=0;i<n;i++)
+	{
+		System.out.println(name[i]);
 	}
 	
 	
-	
-	
-	
-	
-public static void main(String[] args) {
-		
-		lexico ob=new lexico();
-		ob.lexic();
-		
-	}
+}
 }
