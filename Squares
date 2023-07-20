@@ -1,0 +1,24 @@
+import java.util.*;
+public class Squares {
+public static void main(String args[]) {
+    System.out.println("enter the size of square matrix");
+	Scanner Sc=new Scanner(System.in);
+	int n=Sc.nextInt();
+	int sum=0;
+	if(n<=0)
+	{
+	System.out.println("invalid");
+	
+}
+	else
+	{
+		while(n!=0)
+		{
+			sum=sum+n*n;
+		n--;
+		
+	}
+	System.out.println("result"+sum);
+}
+}
+}
