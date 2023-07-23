@@ -1,0 +1,35 @@
+package multipleinheritance;
+
+public interface Subtraction {
+void sub(int a,int b);
+}
+package multipleinheritance;
+
+public interface Addition {
+void add(int a,int b);
+}
+package multipleinheritance;
+
+public class operate implements Subtraction, Addition
+{
+public void sub(int a, int b)
+{
+	int diff=a-b;
+	System.out.println("diff of a and b is"+diff);
+}
+public void add(int a,int b)
+{
+	int sum=a+b;
+	System.out.println("sum of a and b is"+sum);
+}
+}
+package multipleinheritance;
+
+public class main {
+public static void main(String args[])
+{
+	operate obj=new  operate();
+	obj.sub(10, 2);
+	obj.add(10, 1);
+}
+}
