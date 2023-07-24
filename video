@@ -115,7 +115,7 @@ System.out.println("No movies in the library");
 }
 for(Video m : MovieList)
 {
-System.out.println("Movie : " +m.getmName()+" "+"Status : "+m.isStatus()+" "+"Rating "+m.getRating());
+System.out.println("Movie : " + m.getmName() + " " + "Status : " + m.isStatus() + " " + "Rating " + m.getRating());
 } 
 }
  
