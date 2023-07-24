@@ -1,0 +1,45 @@
+package happy;
+public interface yes {
+int check(int num);
+}
+package happy;
+import java.util.*;
+public  class happy implements yes
+{
+public int  check (int num)
+{
+	int rem=0,sum=0;
+	while(num>0)
+	{
+		rem=num%10;
+		sum=sum+(rem*rem);
+		num=num/10;
+	}
+	return sum;
+	
+}
+}
+package happy;
+import java.util.*;
+public class happynum {
+public static void main(String args[])
+{
+	happy obj=new happy();
+	System.out.println("enter the no greater than 0");
+	Scanner Sc=new Scanner(System.in);
+	int number=Sc.nextInt();
+	int val=number;
+	while(val!=1&& val!=4)
+	{
+		val=obj.check(val);
+	}
+	if(val==1)
+	{
+		System.out.println(number+ "is a happy no");
+	}
+	else
+	{
+		System.out.println(number+"is not a happy no");
+	}
+}
+}
