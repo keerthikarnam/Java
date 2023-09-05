@@ -1,6 +1,10 @@
 package doublylinkedlist;
 
-public class Node {
+
+
+
+public class MinMax{
+ class Node {
 	
 int data;
 Node previous;
@@ -10,6 +14,7 @@ public Node(int data)
 	this.data=data;
 	
 }
+ }
 Node head,tail=null;
 public  void addNode(int data)
 {
@@ -33,7 +38,7 @@ public  void addNode(int data)
 public int MinimumNode()
 {
 	Node current=head;
-	int min;
+	int min=0;
 	if(head==null)
 	{
 		System.out.println("list is empty");
@@ -57,7 +62,7 @@ public int MinimumNode()
 public int MaximumNode()
 {
 	Node current=head;
-	int max;
+	int max=0;
 	if(head==null)
 	{
 		System.out.println("list is empty");
@@ -78,7 +83,7 @@ public int MaximumNode()
 	return max;
 }
 public static void main(String args[]) {
-	Node dList=new Node(5);
+	MinMax dList=new MinMax();
 	dList.addNode(5); 
 	dList.addNode(7); 
 	dList.addNode(9); 
@@ -88,3 +93,4 @@ public static void main(String args[]) {
 	System.out.println("maximum of node is"+dList.MaximumNode());
 }
 }
+
